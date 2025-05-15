@@ -1,4 +1,4 @@
-import TennisTrainer from './TennisTrainer';
+import TennisTrainer from './TennisTrainer.js';
 
 function App() {
   return <TennisTrainer />;

@@ -1,0 +1,126 @@
+.trainer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: #f9fafb;
+    font-family: sans-serif;
+  }
+  
+  .trainer-card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .trainer-header {
+    background-color: #16a34a;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .trainer-icons button {
+    background: none;
+    border: none;
+    margin-left: 8px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .level-selection {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #f1f5f9;
+  }
+  
+  .level-btn {
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .beginner-active {
+    background-color: #22c55e;
+    color: white;
+  }
+  
+  .intermediate-active {
+    background-color: #eab308;
+    color: white;
+  }
+  
+  .pro-active {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .main-display {
+    padding: 2rem;
+    text-align: center;
+    min-height: 160px;
+  }
+  
+  .cue-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .cue-text.shot {
+    color: #2563eb;
+  }
+  
+  .cue-text.hit {
+    color: #dc2626;
+  }
+  
+  .level-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .start-message {
+    font-size: 1.125rem;
+    color: #6b7280;
+  }
+  
+  .trainer-controls {
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .play-btn {
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .play-btn.play {
+    background-color: #22c55e;
+  }
+  
+  .play-btn.pause {
+    background-color: #ef4444;
+  }
+  
+  .trainer-footer {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
