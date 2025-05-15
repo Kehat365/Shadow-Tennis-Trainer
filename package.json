@@ -2,7 +2,7 @@
   "name": "tennis-trainer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Kehat365.github.io/tennis-trainer",
+  "homepage": "https://Kehat365.github.io/shadow-tennis-trainer",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
