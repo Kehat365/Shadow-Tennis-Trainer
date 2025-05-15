@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/shadow-tennis-trainer/static/js/main.afd9e810.js",
+    "index.html": "/shadow-tennis-trainer/index.html",
+    "main.afd9e810.js.map": "/shadow-tennis-trainer/static/js/main.afd9e810.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.afd9e810.js"
+  ]
+}
