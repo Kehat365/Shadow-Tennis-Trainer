@@ -1,126 +1,388 @@
-.trainer-container {
+:root {
+    --text-primary: #ffffff;
+    --background: #f8f9fa;
+    --color-clay: #cc4b2c;
+    --color-clay-dark: #b03c1f;
+    --color-hard: #3161a3;
+    --color-grass: #3e8e41;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+      /* New additions */
+    --color-baseline: #2e2e2e;     /* Black line for contrast */
+    --color-net: #dddddd;          /* Subtle gray for borders */
+    --color-highlight: #ffd700;    /* Yellow tennis ball highlight */
+    --color-neutral: #e5e7eb;      /* Light gray */
+    --color-custom: #89920e;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .landing-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 1rem;
-    background-color: #f9fafb;
+    background-color: var(--background);
+    padding: 2rem;
+    text-align: center;
     font-family: sans-serif;
   }
   
-  .trainer-card {
-    width: 100%;
-    max-width: 400px;
+  .landing-card {
+    max-width: 600px;
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .trainer-header {
-    background-color: #16a34a;
-    padding: 1rem;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .trainer-icons button {
-    background: none;
-    border: none;
-    margin-left: 8px;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .level-selection {
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    background-color: #f1f5f9;
-  }
-  
-  .level-btn {
-    padding: 8px 16px;
-    border-radius: 12px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .beginner-active {
-    background-color: #22c55e;
-    color: white;
-  }
-  
-  .intermediate-active {
-    background-color: #eab308;
-    color: white;
-  }
-  
-  .pro-active {
-    background-color: #ef4444;
-    color: white;
-  }
-  
-  .main-display {
     padding: 2rem;
-    text-align: center;
-    min-height: 160px;
+    border-radius: 16px;
+    border: 4px solid var(--color-clay);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
   
-  .cue-text {
+  .landing-card h1 {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 1rem;
   }
   
-  .cue-text.shot {
-    color: #2563eb;
+  .landing-card h2 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
   }
   
-  .cue-text.hit {
-    color: #dc2626;
+  .landing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
   }
   
-  .level-label {
+  .landing-card ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .start-btn {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: var(--color-clay);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  
+  .start-btn:hover {
+    background-color: #b03c1f;
+  }
+  
+  .github-link {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .github-link a {
+    color: var(--color-hard);
+    text-decoration: none;
+  }
+  /* === Layout Wrapper === */
+.trainer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    font-family: system-ui, sans-serif;
+  }
+  
+  /* === Header === */
+  .trainer-header {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--color-clay);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .trainer-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .icons button {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 0.75rem;
+    cursor: pointer;
+  }
+  
+  /* === Intro === */
+  .intro {
+    max-width: 600px;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-dark);
+  }
+  
+  /* === Levels === */
+  .levels {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .level-btn {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-neutral);
+    color: var(--text-dark);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .level-btn.active {
+    color: white;
+  }
+  
+  .level-btn.active:nth-child(1) {
+    background-color: var(--color-clay);
+  }
+  
+  .level-btn.active:nth-child(2) {
+    background-color: var(--color-grass);
+  }
+  
+  .level-btn.active:nth-child(3) {
+    background-color: var(--color-hard);
+  }
+
+  .level-btn.active:nth-child(4) {
+    background-color: var(--color-custom);
+  }
+  
+  /* === Training Area === */
+  .training-area {
+    min-height: 150px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cue {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cue.shot {
+    color: var(--color-hard);
+  }
+  
+  .cue.hit {
+    color: var(--color-clay);
+  }
+  
+  .cue.recover {
+    color: var(--color-grass);
+  }
+  
+  .cue-label {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: var(--text-muted);
   }
   
-  .start-message {
+  .idle-text {
     font-size: 1.125rem;
-    color: #6b7280;
+    color: var(--text-muted);
   }
   
-  .trainer-controls {
-    padding: 1rem;
-    border-top: 1px solid #e5e7eb;
+  /* === Controls === */
+  .controls {
     display: flex;
     justify-content: center;
+    margin-bottom: 1.5rem;
   }
   
   .play-btn {
-    padding: 1rem;
-    border-radius: 50%;
-    border: none;
+    background-color: var(--color-clay);
     color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 99px;
+    font-size: 1.25rem;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease;
   }
   
-  .play-btn.play {
-    background-color: #22c55e;
+  .play-btn:hover {
+    background-color: var(--color-clay-dark);
   }
   
-  .play-btn.pause {
-    background-color: #ef4444;
-  }
-  
+  /* === Footer === */
   .trainer-footer {
-    margin-top: 1rem;
     font-size: 0.875rem;
-    color: #6b7280;
+    color: var(--text-muted);
+    text-align: center;
   }
   
+  .trainer-footer a {
+    color: var(--color-hard);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* === Modal === */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-clay);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* === Custom Settings Section === */
+  .custom-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .custom-card {
+    background: var(--bg-white);
+    padding: 1.5rem;
+    border: 2px solid var(--color-net);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  
+  .custom-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-hard);
+    border-bottom: 2px solid var(--color-hard);
+    padding-bottom: 0.5rem;
+  }
+  
+  .cue-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .cue-selector label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    background: var(--bg-light);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .cue-selector input[type='checkbox']:checked + span {
+    font-weight: bold;
+    color: var(--color-clay-dark);
+  }
+  
+  .cue-selector input[type='checkbox']:checked ~ label {
+    border-color: var(--color-clay);
+    background: #fffaf8;
+  }
+  
+  .add-cue {
+    grid-column: span 2;
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .add-cue input[type='text'] {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--color-net);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: var(--bg-white);
+  }
+  
+  .add-cue button {
+    padding: 0.5rem 1rem;
+    background: var(--color-highlight);
+    color: var(--text-dark);
+    font-weight: bold;
+    border-radius: 9999px;
+    border: 2px solid var(--color-baseline);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .add-cue button:hover {
+    background: #2895b1;
+  }
+  
+  .timing-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .timing-settings label {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed var(--color-net);
+    padding-bottom: 0.25rem;
+  }
+  
+  .timing-settings input[type='number'] {
+    padding: 0.4rem;
+    width: 5rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-net);
+    background: var(--bg-white);
+  }
