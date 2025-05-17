@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Shadow-Tennis-Trainer/static/css/main.277dbb67.css",
-    "main.js": "/Shadow-Tennis-Trainer/static/js/main.a33057a2.js",
+    "main.css": "/Shadow-Tennis-Trainer/static/css/main.5fb0b5ef.css",
+    "main.js": "/Shadow-Tennis-Trainer/static/js/main.8f2b80d7.js",
     "index.html": "/Shadow-Tennis-Trainer/index.html",
-    "main.277dbb67.css.map": "/Shadow-Tennis-Trainer/static/css/main.277dbb67.css.map",
-    "main.a33057a2.js.map": "/Shadow-Tennis-Trainer/static/js/main.a33057a2.js.map"
+    "main.5fb0b5ef.css.map": "/Shadow-Tennis-Trainer/static/css/main.5fb0b5ef.css.map",
+    "main.8f2b80d7.js.map": "/Shadow-Tennis-Trainer/static/js/main.8f2b80d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.277dbb67.css",
-    "static/js/main.a33057a2.js"
+    "static/css/main.5fb0b5ef.css",
+    "static/js/main.8f2b80d7.js"
   ]
 }
